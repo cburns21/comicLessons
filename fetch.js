@@ -8,10 +8,14 @@ document.addEventListener('DOMContentLoaded', function(){
       var body = document.querySelector('h1')
       console.log(JSONresponse)
      body.innerText = JSONresponse.title
-      var bodyAlt = document.querySelector('p')
+      var bodyAlt = document.getElementById('bodyText')
       bodyAlt.innerText = JSONresponse.alt
       var bodyimg = document.querySelector('img')
       bodyimg.innerText = JSONresponse.img
+      var bodyPTag = document.getElementById('title')
+      bodyPTag.innerText = JSONresponse.safe_title
+      var secondP = document.getElementById('number')
+      secondP.innerText = JSONresponse.num
   })
 })
 
@@ -20,5 +24,6 @@ function button(){
 }
 
 function button2(){
+    document.body.style.backgroundColor= "green"
     
 }
